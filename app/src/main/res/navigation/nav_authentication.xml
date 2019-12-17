@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registrationFragment">
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.eattoo.authentication.views.fragments.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_registrationFragment_to_mobileVerificationFragment"
+            app:destination="@id/mobileVerificationFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/mobileVerificationFragment"
+        android:name="com.example.eattoo.authentication.views.fragments.MobileVerificationFragment"
+        android:label="fragment_mobile_verification"
+        tools:layout="@layout/fragment_mobile_verification">
+        <action
+            android:id="@+id/action_mobileVerificationFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment"/>
+        <argument
+            android:name="test"
+            app:argType="string"
+            android:defaultValue="test" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.eattoo.authentication.views.fragments.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_interestFragment"
+            app:destination="@id/interestFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/interestFragment"
+        android:name="com.example.eattoo.authentication.views.fragments.InterestFragment"
+        android:label="fragment_interest"
+        tools:layout="@layout/fragment_interest">
+        <action
+            android:id="@+id/action_interestFragment_to_congratulationFragment"
+            app:destination="@id/congratulationFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/congratulationFragment"
+        android:name="com.example.eattoo.authentication.views.fragments.CongratulationFragment"
+        android:label="fragment_congratulation"
+        tools:layout="@layout/fragment_congratulation">
+        <action
+            android:id="@+id/action_congratulationFragment_to_homeActivity"
+            app:destination="@id/homeActivity"/>
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.eattoo.home.views.activitys.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home"/>
+</navigation>
