@@ -56,7 +56,7 @@
                     android:id="@+id/phone_number"
                     android:hint="7416226233"
                     android:text="@={userprofile.mobileNumber}"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
 

@@ -10,12 +10,13 @@ public class UserProfile extends ViewModel {
     private MutableLiveData<String> mobileNumber;
     private MutableLiveData<String> countryNumber;
     private MutableLiveData<String> name;
+    private MutableLiveData<String> gender;
     private MutableLiveData<String> email;
 
     public MutableLiveData<String> getMobileNumber() {
         if(null == mobileNumber) {
             mobileNumber = new MutableLiveData<>();
-            mobileNumber.setValue("1122334455");
+            mobileNumber.setValue("7416226233");
         }
         return mobileNumber;
     }
@@ -30,6 +31,18 @@ public class UserProfile extends ViewModel {
             countryNumber.setValue("+91");
         }
         return countryNumber;
+    }
+
+    public MutableLiveData<String> getGender() {
+        if (null == gender) {
+            gender = new MutableLiveData<>();
+            gender.setValue("fe mail");
+        }
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.getGender().setValue(gender);
     }
 
     public void setCountryNumber(String countryNumber) {

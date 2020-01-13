@@ -46,17 +46,7 @@
                     android:weightSum="2"
                     android:orientation="horizontal">
                     <Button
-                        android:padding="16dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:background="@drawable/button_yellow_bg"
-                        android:text="male"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"/>
-                    <Button
+                        android:id="@+id/male"
                         android:padding="16dp"
                         android:layout_gravity="center"
                         android:gravity="center"
@@ -64,6 +54,18 @@
                         android:textSize="18sp"
                         android:background="@drawable/button_white_bg"
                         android:text="male"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"/>
+                    <Button
+                        android:id="@+id/fe_male"
+                        android:padding="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:background="@drawable/button_yellow_bg"
+                        android:text="fe male"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="match_parent"/>
@@ -80,12 +82,12 @@
                     android:id="@+id/email"
                     android:text="@={userProfile.email}"/>
 
-                <EditText
+                <TextView
                     style="@style/profile_edit_text_field"
                     android:hint="Select Preference"
                     android:id="@+id/select_preference" />
 
-                <EditText
+                <TextView
                     style="@style/profile_edit_text_field"
                     android:hint="Mobile Number"
                     android:text="@={userProfile.mobileNumber}"

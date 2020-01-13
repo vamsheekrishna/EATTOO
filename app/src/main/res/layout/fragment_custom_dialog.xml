@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:padding="8dp"
+    tools:context=".base.views.CustomDialogFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_margin="16dp"
+        android:textStyle="bold|italic"
+        android:text="@string/hello_blank_fragment" />
+    <Button
+        android:id="@+id/calcel"
+        android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/white"
+        android:background="@drawable/submit_button_bg"
+        android:layout_below="@+id/content"
+        android:layout_width="100dp"
+        android:text="Cancel"
+        android:visibility="gone"
+        android:layout_toLeftOf="@+id/ok"
+        android:layout_marginRight="8dp"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/ok"
+        android:textSize="16sp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/white"
+        android:background="@drawable/submit_button_bg"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/content"
+        android:layout_width="100dp"
+        android:text="OK"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

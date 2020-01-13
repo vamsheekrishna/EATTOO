@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
     tools:context=".authentication.views.fragments.InterestFragment">
-
-    <ImageView
+    <TextView
+        android:id="@+id/welcome"
+        android:text="Welcome Vicky"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/sub_title"
+        android:text="Select your Interest"
+        android:layout_below="@+id/welcome"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <!--<ImageView
         android:background="@drawable/interests_full_bg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"/>-->
 
-</FrameLayout>
+</RelativeLayout>

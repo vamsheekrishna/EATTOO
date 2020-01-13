@@ -1,14 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".authentication.views.fragments.MobileVerificationFragment">
+    tools:context=".authentication.views.fragments.MobileVerificationFragment"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verifying Your Number"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:gravity="center"/>
 
-    <ImageView
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We have sent an OTP on your number +91-"
+        android:textSize="18sp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/otp"
+        android:layout_marginTop="24dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:padding="24dp"
+        android:background="@drawable/edit_text_field_bg"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resend OTP?"
+        android:textSize="18sp"
+        android:gravity="center"/>
+    <Button
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:id="@+id/submit"
+        android:layout_marginTop="16dp"
+        android:text="Verify OTP"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:background="@drawable/submit_button_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <!--<ImageView
         android:background="@drawable/pin_code_full_bg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"/>-->
 
-</FrameLayout>
+</LinearLayout>

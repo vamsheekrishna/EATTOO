@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.example.eattoo.R;
 import com.example.eattoo.base.views.BaseFragment;
+import com.example.eattoo.base.views.CustomDialogFragment;
 import com.example.eattoo.eattoo.EatTooMainFunctionActivity;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -54,9 +55,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         locationService = LocationServices.getFusedLocationProviderClient(Objects.requireNonNull(getActivity()));
-        locationService.getLastLocation()
-                .addOnSuccessListener(this)
-                .addOnFailureListener(this);
+        locationService.getLastLocation().addOnSuccessListener(this).addOnFailureListener(this);
         return view;
     }
 
